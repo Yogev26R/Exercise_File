@@ -1,0 +1,63 @@
+PREFIX : <http://api.stardog.com/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+:Urban-warfare a :Exercise-type ;
+   :cantuse :APC .
+       
+:Temperature a :Temperature ;
+   :heatload1 :Open-terrain .
+
+:Open-terrain a :Exercise-type .
+       
+:Area100 a :Open-terrain ;
+   :name "Area 100" .
+
+:Area150 a :Open-terrain ;
+   :name "Area 150" .
+
+:Area200 a :Open-terrain ;
+   :name "Area 200" .
+
+:Area1 a :Closed-terrain ;
+   :name "Area 1" .
+
+:Area2 a :Closed-terrain ;
+   :name "Area 2" .
+
+:Area3 a :Closed-terrain ;
+   :name "Area 3" .
+
+:AreaCNO a :Open-terrain, :Closed-terrain ;
+   :name "Area CNO" .
+
+:Hummer a :AFV ;
+   :name "Hummer" .
+
+:M-109 a :SPG ;
+   :name "M-109" .
+
+:M-109A6 a :SPG ;
+   :name "M-109A6" .
+
+:M-113 a :APC ;
+   :name "M-113" .
+
+:M-114 a :APC ;
+   :name "M-114" .
+
+:BMP-1 a :APC ;
+   :name "BMP-1" .
+
+:Light-Vehicle a :Truck ;
+   :name "Light-Vehicle" .
+
+:Truck4 a :Truck ;
+   :name "truck 4 tons" .
+
+:Artillery-105mm a :Artillery ;
+   :name "Artillery-105mm" .
+
+:Rocket-109 a :Rocket ;
+   :name "Rocket-109" .

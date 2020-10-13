@@ -1,0 +1,77 @@
+PREFIX : <http://api.stardog.com/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+:Terrain a rdfs:Class ;
+   rdfs:label "Terrain" ;
+   rdfs:comment "A Terrain." .
+       
+:Temperature a rdfs:Class ;
+   rdfs:label "Temperature" ;
+   rdfs:comment "A Temperature." .
+
+:Open-terrain a rdfs:Class ;
+   rdfs:label "Open terrain" ;
+   rdfs:comment "; type of transport ammunition." ;
+   rdfs:subClassOf :Terrain .
+
+:Closed-terrain a rdfs:Class ;
+   rdfs:label "Closed terrain" ;
+   rdfs:comment "; type of transport ammunition." ;
+   rdfs:subClassOf :Terrain .
+       
+:Exercise-type a rdfs:Class ;
+   rdfs:label "Exercise Type" ;
+   rdfs:comment "An ExerciseType." .
+       
+:Ammunition a rdfs:Class ;
+   rdfs:label "TransportVehicle" ;
+   rdfs:comment "A Transport Vehicle." .
+
+:Rocket a rdfs:Class ;
+   rdfs:label "Rocket" ;
+   rdfs:comment "; type of transport ammunition." ;
+   rdfs:subClassOf :Ammunition .
+
+:Artillery a rdfs:Class ;
+   rdfs:label "Artillery" ;
+   rdfs:comment "; type of transport ammunition." ;
+   rdfs:subClassOf :Ammunition .
+       
+:TransportVehicle a rdfs:Class ;
+   rdfs:label "TransportVehicle" ;
+   rdfs:comment "A Transport Vehicle." .
+
+:AFV a rdfs:Class ;
+   rdfs:label "AFV" ;
+   rdfs:comment "An Armoured fighting vehicle; type of transport vehicle." ;
+   rdfs:subClassOf :TransportVehicle .
+
+:SPG a rdfs:Class ;
+   rdfs:label "AFV" ;
+   rdfs:comment "An Armoured fighting vehicle with a cannon; type of AFV." ;
+   rdfs:subClassOf :AFV .
+
+:APC a rdfs:Class ;
+   rdfs:label "APC" ;
+   rdfs:comment "An Armoured transport vehicle; type of AFV." ;
+   rdfs:subClassOf :AFV .
+
+:Truck a rdfs:Class ;
+   rdfs:label "Truck" ;
+   rdfs:comment "A truck; type of transport vehicle." ;
+   rdfs:subClassOf :TransportVehicle .
+
+:name a rdf:Property ;
+   rdfs:label "name" ;
+   rdfs:comment "The name of an entity." ;
+   rdfs:range xsd:string .
+
+:cantUse a rdfs:Property ;
+   rdfs:label "Cant Use link" ;
+   rdfs:comment "Cant use b in a" .
+
+:heatLoad1 a rdfs:Property ;
+   rdfs:label "Heat Load level 1 link" ;
+   rdfs:comment "Temperature is too hot" .
